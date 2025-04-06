@@ -1,7 +1,7 @@
-model/.env
-model/Chatbot
-model/.ipynb_checkpoints
-model//Testing.ipynb
+.env
+Chatbot
+.ipynb_checkpoints
+Testing.ipynb
 model/.DS_Store
 
 
