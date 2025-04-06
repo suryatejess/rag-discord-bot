@@ -1,5 +1,13 @@
-.env
-/Chatbot
-/.ipynb_checkpoints
-/Testing.ipynb
+model/.env
+model/Chatbot
+model/.ipynb_checkpoints
+model//Testing.ipynb
+model/.DS_Store
+
+
+bot2/.env
+bot2/node_modules/
+bot2/.DS_Store
+
+
 .DS_Store
