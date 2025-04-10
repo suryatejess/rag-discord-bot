@@ -19,7 +19,18 @@ module.exports = {
     // sending file to backend
     const fileUrl = attachment.url;
 
-    fetch("http://localhost:9000/url", {
+    // axios
+    //   .post("http://localhost:3333/processFile", {
+    //     fileUrl: fileUrl,
+    //   })
+    //   .then((response) => {
+    //     console.log("sent to backend", response.data);
+    //   })
+    //   .catch((err) => {
+    //     console.error("error sending to backend", err);
+    //   });
+
+    fetch("http://localhost:5000/url", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
