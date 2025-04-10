@@ -18,15 +18,20 @@ module.exports = {
 
     // sending file to backend
     const fileUrl = attachment.url;
-    axios
-      .post("http://localhost:3333/processFile", {
-        fileUrl: fileUrl,
+
+    fetch("http://localhost:9000/url", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ url: fileUrl }),
+    })
+      .then((response) => response.text())
+      .then((data) => {
+        console.log("Python says:", data);
       })
-      .then((response) => {
-        console.log("sent to backend", response.data);
-      })
-      .catch((err) => {
-        console.error("error sending to backend", err);
+      .catch((error) => {
+        console.error("Error:", error);
       });
 
     // Debug log
